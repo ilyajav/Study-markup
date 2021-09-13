@@ -1,0 +1,102 @@
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
+  \****************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #dbdbe3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana;
+  line-height: 1.154;
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 13px; }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 5px 5%; }
+
+.nav-left {
+  display: flex;
+  align-items: center; }
+  .nav-left ul li {
+    list-style: none;
+    display: inline-block; }
+    .nav-left ul li .icon {
+      display: flex; }
+      .nav-left ul li .icon svg {
+        width: 28px;
+        margin: 0 15px;
+        color: #6f7985; }
+    .nav-left ul li input {
+      padding: 0 0 0 34px;
+      height: 32px;
+      border-radius: 8px;
+      margin: 0;
+      border: 0;
+      background-color: #edeef0;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20opacity%3D%22.92%22%3E%3Cpath%20opacity%3D%22.1%22%20d%3D%22M0%200H16V16H0z%22%2F%3E%3Cpath%20d%3D%22M6.5%201a5.5%205.5%200%200%201%204.383%208.823l3.896%203.9a.75.75%200%200%201-1.061%201.06l-3.895-3.9A5.5%205.5%200%201%201%206.5%201zm0%201.5a4%204%200%201%200%200%208%204%204%200%200%200%200-8z%22%20fill%3D%22%23818c99%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-position: 10px;
+      background-repeat: no-repeat; }
+
+.nav-right {
+  display: flex;
+  align-items: center; }
+  .nav-right .nav-user-icon img {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px; }
+  .nav-right .user-name {
+    margin-right: 10px;
+    font-weight: 500; }
+  .nav-right .icon {
+    color: #6f7985;
+    margin: 0 7px; }
+
+.logo {
+  width: 160px;
+  margin-right: 45px; }
+
+.mainContainer {
+  padding: 20px 20px 0 20px; }
+
+.contentContainer {
+  display: flex;
+  height: 100vh;
+  background-color: #d8ee4c; }
+
+.content {
+  width: 400px;
+  height: 400px;
+  background-color: #87dc54;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.search {
+  width: 100%;
+  height: 50px;
+  background-color: #d8ee4c; }
+
+.histories {
+  width: 100%;
+  height: 50px;
+  background-color: violet; }
+
+.feed {
+  width: 100%;
+  height: 50px;
+  background-color: gainsboro; }
+
+.events {
+  width: 400px;
+  height: 400px;
+  background-color: #534be8; }
+
+li {
+  list-style-type: none; }
+
