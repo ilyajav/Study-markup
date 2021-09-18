@@ -2,7 +2,7 @@
 @import "font-weights";
 
 /*Обнуление*/
-*,*:before,*:after{
+*, *:before, *:after {
   padding: 0;
   margin: 0;
   border: 0;
@@ -28,7 +28,7 @@ li {
   list-style-type: none;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   min-height: 100%;
   height: 100%;
@@ -66,32 +66,50 @@ header {
         width: 80px;
       }
       .icon {
-        flex-direction: column;
-        gap: 10px;
+        margin-right: -10px;
       }
     }
   }
 }
 
-.nav-left{
- display: flex;
+.nav-left {
+  display: flex;
 
-  ul{
+  ul {
     display: flex;
     align-items: center;
 
-    li{
+    li {
       display: flex;
-      .icon{
+
+      .icon {
         display: flex;
-        svg{
+        position: relative;
+
+        .notification-icon {
+          width: 30px;
+          height: 30px;
+          position: relative;
+        }
+
+        .notification-text {
+          background-color: red;
+          font-size: xx-small;
+          position: absolute;
+          padding: 1px;
+          top: 1px;
+          left: 20px;
+          border-radius: 25px;
+        }
+
+        svg {
           width: 28px;
           margin: 0 10px;
           color: $iconsColor;
         }
       }
 
-      input{
+      input {
         padding: 0 0 0 34px;
         height: 32px;
         border-radius: 8px;
@@ -106,21 +124,23 @@ header {
   }
 }
 
-.nav-right{
-   display: flex;
-   align-items: center;
+.nav-right {
+  display: flex;
+  align-items: center;
 
-  .nav-user-icon{
-    img{
+  .nav-user-icon {
+    img {
       border-radius: 50%;
       width: 32px;
       max-width: 100%;
     }
   }
-  .user-name{
+
+  .user-name {
     margin-right: 10px;
   }
-  .icon{
+
+  .icon {
     color: $iconsColor;
     margin: 0 7px;
   }
@@ -152,18 +172,20 @@ header {
 
   @media screen and (max-width: 767px) {
     max-width: 520px;
-    .story-container{
+    width: 100%;
+    .story-container {
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
-    .story{
+    .story {
       min-height: 1000px;
     }
-    .user-news{
+    .user-news {
       display: flex;
       flex-direction: column;
 
-      .left-user-news{
+      .right-user-news {
         display: none;
       }
     }
@@ -186,7 +208,10 @@ header {
       display: flex;
       flex-basis: 5%;
     }
+    .right-sidebar {
+      font-size: 12px;
     }
+  }
 
 
   .left-sidebar {
@@ -267,16 +292,11 @@ header {
     .toggleBlock {
       background: $headerBackground;
       margin: 15px 0;
-      height: 40px;
+      height: 50px;
       border-radius: 4px;
-      font-size: 12.5px;
-      line-height: 15px;
-
-      .text-filter {
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-bottom: 10px;
-      }
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 5px;
     }
   }
 
@@ -288,7 +308,7 @@ header {
       display: flex;
       background-color: $headerBackground;
 
-      .left-user-news{
+      .left-user-news {
         max-width: 220px;
         width: 100%;
         display: flex;
@@ -311,33 +331,35 @@ header {
           max-height: 52px;
         }
       }
-      .right-user-news{
+
+      .right-user-news {
         display: flex;
         justify-content: end;
         align-items: center;
         max-width: 500px;
         width: 100%;
 
-        .news-divider{
+        .news-divider {
           width: 5px;
           height: 13px;
           border-left: 1px solid #929394FF;
           opacity: 0.8;
         }
 
-        .icon{
+        .icon {
           color: $iconsColor;
           margin-right: 10px;
           opacity: 0.8;
         }
-        a{
+
+        a {
           color: $iconsColor;
         }
       }
     }
 
     .story {
-      margin: 45px 0;
+      margin: 15px 0;
       background-color: $headerBackground;
       width: 100%;
       height: 300px;
@@ -345,19 +367,28 @@ header {
       justify-items: center;
       padding-left: 10px;
 
-      .story-container{
+      .story-container {
         display: flex;
         justify-content: space-between;
 
-        .user-story{
+        .user-story {
           flex-basis: 100%;
           height: 70%;
           position: relative;
-          border-radius: 10px ;
+          border-radius: 10px;
 
-          img{
-            margin-top: 10px;
+          .plus {
+            position: absolute;
+            height: 34px;
+            width: 34px;
+            border-radius: 35%;
+            left: 50px;
+            top: 150px;
             background: white;
+          }
+
+          img {
+            margin-top: 10px;
             border-radius: 8%;
             top: 100px;
             left: 73px;
@@ -365,26 +396,57 @@ header {
             width: 100%;
             height: 230px;
           }
-      }
+        }
       }
     }
 
     .posts {
       background-color: $headerBackground;
       width: 100%;
-      height: 100%;
+      height: 500px;
+      margin-bottom: 20px;
 
-       .post-image{
-         img{
-           width: 50px;
-           height: 50px;
-         }
-       }
-      img{
-        width: 100px;
-        height: 100px;
+      .post-image {
+        img {
+          max-width: 50px;
+          width: 100%;
+          height: 50px;
+        }
       }
+
+      img {
+        padding-left: 20px;
+        padding-top: 20px;
+        max-width: 600px;
+        width: 100%;
       }
+
+      .post-divider {
+        margin-top: 20px;
+        border-bottom: 1px solid #9b9999;
+      }
+
+      .post-params {
+        display: flex;
+        justify-content: space-between;
+        max-width: 700px;
+        width: 100%;
+
+        .right-params {
+          img {
+            width: 45px;
+            height: 45px;
+          }
+        }
+
+        .left-params {
+          img {
+            width: 45px;
+            height: 45px;
+          }
+        }
+      }
+    }
   }
 }
 
