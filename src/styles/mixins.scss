@@ -1,0 +1,14 @@
+@mixin post-bottom{
+  width: 45px;
+  height: 45px;
+}
+
+@mixin flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+}
