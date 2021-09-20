@@ -152,404 +152,413 @@ li {
 
   @media screen and (max-width: 991px) {
     max-width: 720px;
-    .plus{
-      left: 30px!important;
-    }
   }
 
-  @media screen and (max-width: 767px) {
-    max-width: 520px;
-    width: 100%;
-    .story-container {
-      @include flex-column;
-      align-items: center;
-      gap: 15px;
-    }
-    .plus{
-      left: 40px!important;
-    }
-    .story {
-      min-height: 1300px;
-      height: 100%;
 
-      .story__text{
-        display: flex;
-        justify-content: center;
-      }
-    }
-
-    .user-news {
-      @include flex-column;
-
-      .right-user-news {
-        display: flex;
-        justify-content: center;
-      }
-
-      .left-user-news {
-        display: flex;
-        align-self: center;
-      }
-    }
-
-    .main-content {
-      .posts {
-        max-height: 450px;
-        height: 100%;
-      }
-    }
+@media screen and (max-width: 767px) {
+  max-width: 520px;
+  width: 100%;
+  .story-container {
+    @include flex-column;
+    align-items: center;
+    gap: 15px;
   }
+  .user-story__plus-image {
+    left: 40px;
+  }
+  .story {
+    min-height: 1300px;
+    height: 100%;
 
-  @media screen and (max-width: 575px) {
-    max-width: 100%;
-    padding: 0 10px;
-
-    .link-text {
-      display: none;
-    }
-    .hr {
-      display: none;
-    }
-    .ad-links {
-      display: none;
-    }
-    .left-sidebar {
+    .story__text {
       display: flex;
-      flex-basis: 10%;
+      justify-content: center;
     }
-    .right-sidebar {
-      display: none;
+  }
 
-      .events {
-        @include flex-column;
-        align-content: center;
-        gap: 5px;
-        font-size: 7.5px;
-      }
+  .user-news {
+    @include flex-column;
 
-      .toggle-block {
-        display: flex;
-        width: 62px;
-
-        .interesting-text {
-          display: none;
-        }
-      }
+    .right-user-news {
+      display: flex;
+      justify-content: center;
     }
+
     .left-user-news {
       display: flex;
       align-self: center;
-      gap: 30px;
-    }
-    .user-story__image{
-        min-width: 200px;
-        width: 100%;
-    }
-    .plus{
-      left: 70px!important;
-    }
-  }
-
-
-  .left-sidebar {
-    flex-basis: 15%;
-    top: 80px;
-    align-self: flex-start;
-
-    .left-sidebar__links {
-
-      .hr {
-        border-top: 1px solid $hr;
-        padding-top: 9px;
-        margin: 9px 0 0 36px;
-      }
-
-      .left-link {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        color: $sideIcons;
-        width: fit-content;
-        font-size: 13px;
-        margin-bottom: 10px;
-
-
-        .link-text {
-          color: $linkText;
-        }
-
-        .left-icon {
-          width: 25px;
-          margin-right: 15px;
-        }
-      }
-    }
-
-    .ad-links {
-
-      .left-link {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        padding: 0 6px;
-        color: $sideIcons;
-        width: fit-content;
-        font-size: 13px;
-        margin: 15px 0 13px;
-      }
-
-      .ad-item {
-        max-height: 140px;
-        max-width: 140px;
-      }
-    }
-  }
-
-  .right-sidebar {
-    flex-basis: 15%;
-    position: sticky;
-    width: 100%;
-
-    .events {
-      background: $headerBackground;
-      border-radius: 4px;
-      height: 180px;
-      padding-top: 10px;
-
-      .hr-right {
-        border-top: 1px solid $hr;
-        margin: 6px 15px;
-      }
-
-      .right-link {
-        color: $textLink;
-        text-decoration: none;
-        padding-left: 10px;
-      }
-    }
-
-    .toggle-block {
-      display: inline-block;
-      background: $headerBackground;
-      margin: 15px 0;
-      height: 40px;
-      border-radius: 4px;
-      padding-top: 10px;
-      padding-left: 5px;
-      padding-right: 5px;
-
-      .toggle-block__filter {
-        display: flex;
-        align-items: center;
-
-        .toggle-block__filter__image {
-          margin-right: 6px;
-        }
-      }
-
-      .toggle-block__filter__text {
-        font-size: 9px;
-        margin-right: 6px;
-      }
     }
   }
 
   .main-content {
-    flex-basis: 90%;
-    background-color: $bodyBackground;
-
-    .user-news {
-      display: flex;
-      background-color: $headerBackground;
-
-      .left-user-news {
-        @include flex-between;
-        max-width: 220px;
-        width: 100%;
-
-
-        .left-news__image {
-          position: relative;
-          left: 20px;
-          top: 10px;
-          max-width: 28px;
-          height: 28px;
-          border-radius: 50%;
-          width: 100%;
-        }
-
-        .user-news__input {
-          border: 0;
-          width: 100%;
-          min-height: 52px;
-          max-height: 52px;
-        }
-      }
-
-      .right-user-news {
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        max-width: 500px;
-        width: 100%;
-
-        @media screen and (max-width: 767px) {
-          justify-content: center;
-        }
-
-        .news-divider {
-          width: 5px;
-          height: 13px;
-          border-left: 1px solid #929394FF;
-          opacity: 0.8;
-        }
-
-        .icon {
-          color: $iconsColor;
-          margin-right: 10px;
-          opacity: 0.8;
-        }
-
-        .user-news__links {
-          color: $iconsColor;
-        }
-      }
-    }
-
-    .story {
-      margin: 15px 0;
-      background-color: $headerBackground;
-      width: 100%;
-      height: 300px;
-      align-items: center;
-      justify-items: center;
-      padding-left: 10px;
-
-      .story__text{
-        padding-top: 10px;
-        margin-bottom: 5px;
-      }
-
-      .story-container {
-        @include flex-between;
-
-        .user-story {
-          flex-basis: 100%;
-          position: relative;
-          border-radius: 10px;
-
-          .plus {
-            position: absolute;
-            height: 34px;
-            width: 34px;
-            border-radius: 45%;
-            left: 45px;
-            top: 150px;
-            background: white;
-          }
-
-          .user-story__image {
-            object-fit: fill;
-            margin-top: 10px;
-            border-radius: 8%;
-            top: 100px;
-            left: 73px;
-            max-width: 120px;
-            width: 100%;
-            height: 220px;
-          }
-        }
-      }
-    }
-
     .posts {
-      background-color: $headerBackground;
+      max-height: 450px;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  max-width: 100%;
+  padding: 0 10px;
+
+  .link-text {
+    display: none;
+  }
+  .hr {
+    display: none;
+  }
+  .ad-links {
+    display: none;
+  }
+  .left-sidebar {
+    display: flex;
+    flex-basis: 10%;
+  }
+  .right-sidebar {
+    display: none;
+
+    .events {
+      @include flex-column;
+      align-content: center;
+      gap: 5px;
+      font-size: 7.5px;
+    }
+
+    .toggle-block {
+      display: flex;
+      width: 62px;
+
+      .interesting-text {
+        display: none;
+      }
+    }
+  }
+  .left-user-news {
+    display: flex;
+    align-self: center;
+    gap: 30px;
+  }
+  .user-story__image {
+    min-width: 200px;
+    width: 100%;
+  }
+  .user-story__plus-image {
+    left: 70px;
+  }
+}
+
+
+.left-sidebar {
+  flex-basis: 15%;
+  top: 80px;
+  align-self: flex-start;
+
+  .left-sidebar__links {
+
+    .hr {
+      border-top: 1px solid $hr;
+      padding-top: 9px;
+      margin: 9px 0 0 36px;
+    }
+
+    .left-link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: $sideIcons;
+      width: fit-content;
+      font-size: 13px;
+      margin-bottom: 10px;
+
+
+      .link-text {
+        color: $linkText;
+      }
+
+      .left-icon {
+        width: 25px;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .ad-links {
+
+    .left-link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 0 6px;
+      color: $sideIcons;
+      width: fit-content;
+      font-size: 13px;
+      margin: 15px 0 13px;
+    }
+
+    .ad-item {
+      max-height: 140px;
+      max-width: 140px;
+    }
+  }
+}
+
+.right-sidebar {
+  flex-basis: 15%;
+  position: sticky;
+  width: 100%;
+
+  .events {
+    background: $headerBackground;
+    border-radius: 4px;
+    height: 180px;
+    padding-top: 10px;
+
+    .hr-right {
+      border-top: 1px solid $hr;
+      margin: 6px 15px;
+    }
+
+    .right-link {
+      color: $textLink;
+      text-decoration: none;
+      padding-left: 10px;
+    }
+  }
+
+  .toggle-block {
+    display: inline-block;
+    background: $headerBackground;
+    margin: 15px 0;
+    height: 40px;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    .toggle-block__filter {
+      display: flex;
+      align-items: center;
+
+      .toggle-block__filter__image {
+        margin-right: 6px;
+      }
+    }
+
+    .toggle-block__filter__text {
+      font-size: 9px;
+      margin-right: 6px;
+    }
+  }
+}
+
+.main-content {
+  flex-basis: 90%;
+  background-color: $bodyBackground;
+
+  .user-news {
+    display: flex;
+    background-color: $headerBackground;
+
+    .left-user-news {
+      @include flex-between;
+      max-width: 220px;
       width: 100%;
-      height: 500px;
-      margin-bottom: 20px;
 
-      img{
+
+      .left-news__image {
         position: relative;
-        right: 10px;
-        padding-left: 20px;
-        padding-top: 20px;
-        max-width: 600px;
+        left: 20px;
+        top: 10px;
+        max-width: 28px;
+        height: 28px;
+        border-radius: 50%;
         width: 100%;
       }
 
+      .user-news__input {
+        border: 0;
+        width: 100%;
+        min-height: 52px;
+        max-height: 52px;
+      }
+    }
 
-      .top-params {
-        @include flex-between;
+    .right-user-news {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      max-width: 500px;
+      width: 100%;
 
-        .left-top-params {
-          display: flex;
-          padding-top: 10px;
+      @media screen and (max-width: 767px) {
+        justify-content: center;
+      }
 
-          .post-time {
-            color: $timePost;
+      .news-divider {
+        width: 5px;
+        height: 13px;
+        border-left: 1px solid #929394FF;
+        opacity: 0.8;
+      }
+
+      .icon {
+        color: $iconsColor;
+        margin-right: 10px;
+        opacity: 0.8;
+      }
+
+      .user-news__links {
+        color: $iconsColor;
+      }
+    }
+  }
+
+  .story {
+    margin: 15px 0;
+    background-color: $headerBackground;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+    justify-items: center;
+    padding-left: 10px;
+
+    .story__text {
+      padding-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .story-container {
+      @include flex-between;
+
+      .user-story {
+        flex-basis: 100%;
+        position: relative;
+        border-radius: 10px;
+
+        .user-story__plus-image {
+          position: absolute;
+          height: 34px;
+          width: 34px;
+          border-radius: 45%;
+          left: 45px;
+          top: 150px;
+          background: white;
+
+          @media screen and (max-width: 991px){
+            left: 30px;
+          }
+          @media screen and (max-width: 767px){
+            left: 40px;
+          }
+          @media screen and (max-width: 575px){
+            left: 75px;
           }
         }
-      }
 
-      .right-top-params {
-        padding-top: 10px;
-        padding-right: 5px;
-
-        .right-top-params__image {
-          color: #929394;
-          height: 15px;
-          width: 15px;
-        }
-
-      }
-
-      .post-user {
-
-        .post-user__image {
-          position: relative;
-          bottom: 20px;
-          max-width: 50px;
+        .user-story__image {
+          object-fit: fill;
+          margin-top: 10px;
+          border-radius: 8%;
+          top: 100px;
+          left: 73px;
+          max-width: 120px;
           width: 100%;
-          height: 50px;
-        }
-      }
-
-      .post-divider {
-        margin-top: 20px;
-        border-bottom: 1px solid #9b9999;
-      }
-
-      .post-params {
-        @include flex-between;
-        max-width: 700px;
-        width: 100%;
-
-        .left-params {
-          display: flex;
-
-          .left-params__image {
-            @include post-bottom
-          }
-
-          .counter {
-            padding-top: 25px;
-          }
-        }
-
-        .right-params {
-          display: flex;
-          margin-right: 10px;
-
-          .right-params__image {
-            @include post-bottom
-          }
-
-          .counter {
-            padding-top: 25px;
-          }
+          height: 220px;
         }
       }
     }
   }
+
+  .posts {
+    background-color: $headerBackground;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+
+    img {
+      position: relative;
+      right: 10px;
+      padding-left: 20px;
+      padding-top: 20px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+
+    .top-params {
+      @include flex-between;
+
+      .left-top-params {
+        display: flex;
+        padding-top: 10px;
+
+        .post-time {
+          color: $timePost;
+        }
+      }
+    }
+
+    .right-top-params {
+      padding-top: 10px;
+      padding-right: 5px;
+
+      .right-top-params__image {
+        color: #929394;
+        height: 15px;
+        width: 15px;
+      }
+
+    }
+
+    .post-user {
+
+      .post-user__image {
+        position: relative;
+        bottom: 20px;
+        max-width: 50px;
+        width: 100%;
+        height: 50px;
+      }
+    }
+
+    .post-divider {
+      margin-top: 20px;
+      border-bottom: 1px solid #9b9999;
+    }
+
+    .post-params {
+      @include flex-between;
+      max-width: 700px;
+      width: 100%;
+
+      .left-params {
+        display: flex;
+
+        .left-params__image {
+          @include post-bottom
+        }
+
+        .counter {
+          padding-top: 25px;
+        }
+      }
+
+      .right-params {
+        display: flex;
+        margin-right: 10px;
+
+        .right-params__image {
+          @include post-bottom
+        }
+
+        .counter {
+          padding-top: 25px;
+        }
+      }
+    }
+  }
+}
+
 }
 

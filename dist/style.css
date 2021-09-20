@@ -106,9 +106,7 @@ li {
       max-width: 920px; } }
   @media screen and (max-width: 991px) {
     .content-container {
-      max-width: 720px; }
-      .content-container .plus {
-        left: 30px !important; } }
+      max-width: 720px; } }
   @media screen and (max-width: 767px) {
     .content-container {
       max-width: 520px;
@@ -118,8 +116,8 @@ li {
         flex-direction: column;
         align-items: center;
         gap: 15px; }
-      .content-container .plus {
-        left: 40px !important; }
+      .content-container .user-story__plus-image {
+        left: 40px; }
       .content-container .story {
         min-height: 1300px;
         height: 100%; }
@@ -171,8 +169,8 @@ li {
       .content-container .user-story__image {
         min-width: 200px;
         width: 100%; }
-      .content-container .plus {
-        left: 70px !important; } }
+      .content-container .user-story__plus-image {
+        left: 70px; } }
   .content-container .left-sidebar {
     flex-basis: 15%;
     top: 80px;
@@ -301,7 +299,7 @@ li {
           flex-basis: 100%;
           position: relative;
           border-radius: 10px; }
-          .content-container .main-content .story .story-container .user-story .plus {
+          .content-container .main-content .story .story-container .user-story .user-story__plus-image {
             position: absolute;
             height: 34px;
             width: 34px;
@@ -309,6 +307,15 @@ li {
             left: 45px;
             top: 150px;
             background: white; }
+            @media screen and (max-width: 991px) {
+              .content-container .main-content .story .story-container .user-story .user-story__plus-image {
+                left: 30px; } }
+            @media screen and (max-width: 767px) {
+              .content-container .main-content .story .story-container .user-story .user-story__plus-image {
+                left: 40px; } }
+            @media screen and (max-width: 575px) {
+              .content-container .main-content .story .story-container .user-story .user-story__plus-image {
+                left: 75px; } }
           .content-container .main-content .story .story-container .user-story .user-story__image {
             object-fit: fill;
             margin-top: 10px;
